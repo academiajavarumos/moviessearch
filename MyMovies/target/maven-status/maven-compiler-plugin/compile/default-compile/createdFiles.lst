@@ -1,0 +1,4 @@
+pt\rumos\model\Movie.class
+pt\rumos\presentation\App.class
+pt\rumos\servlet\MovieServlet.class
+pt\rumos\model\NewReleases.class
