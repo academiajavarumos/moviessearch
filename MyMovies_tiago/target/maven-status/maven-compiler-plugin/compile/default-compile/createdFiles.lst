@@ -1,0 +1,5 @@
+pt\rumos\model\Movie.class
+pt\rumos\servlet\App.class
+pt\rumos\model\ApiCallService.class
+pt\rumos\model\NewReleasesResponse.class
+pt\rumos\servlet\MovieServlet.class
