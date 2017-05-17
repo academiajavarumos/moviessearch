@@ -25,7 +25,6 @@ public class ApiCallService {
 		objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 		NewReleasesResponse responseAsObj = objectMapper.readValue(bodyAsString, NewReleasesResponse.class);
 
-		System.out.println(responseAsObj);
 		
 		return responseAsObj;
 		

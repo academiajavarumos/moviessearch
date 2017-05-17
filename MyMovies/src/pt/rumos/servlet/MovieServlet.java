@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import pt.rumos.model.ApiCallService;
+import pt.rumos.model.NewReleasesResponse;
 
 
 @WebServlet("/MovieServlet")
@@ -23,8 +24,11 @@ public class MovieServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	ApiCallService newCall =  new ApiCallService();
-	newCall.ApiCall();
-		getServletContext().getRequestDispatcher("/index.jsp").forward(request,response);
+	NewReleasesResponse moviesListResponse =newCall.ApiCall();
+	
+	request.setAttribute("data", moviesListResponse.getFilms());
+	request.getRequestDispatcher("films.jsp").forward(request, response);
+	
 	}
 
 	
