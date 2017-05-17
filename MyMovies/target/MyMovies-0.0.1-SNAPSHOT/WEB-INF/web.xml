@@ -3,6 +3,6 @@
   <display-name>MyMovies</display-name>
   <welcome-file-list>
 
-    <welcome-file>/MovieServlet</welcome-file>
+    <welcome-file>MovieServlet</welcome-file>
   </welcome-file-list>
 </web-app>

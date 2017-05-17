@@ -13,6 +13,10 @@
 	<table>
 		<c:forEach var="movie" items="${data}">
 			<tr>${movie.originalTitle}</tr>
+			<tr>${movie.overview}</tr>
+			<tr>${movie.releaseDate}</tr>
+			<tr>${movie.poster}</tr>
+			
 		</c:forEach>
 	</table>
 </body>
