@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import pt.rumos.model.ApiCallService;
+
 
 @WebServlet("/MovieServlet")
 public class MovieServlet extends HttpServlet {
@@ -19,16 +21,16 @@ public class MovieServlet extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+	ApiCallService newCall =  new ApiCallService();
+	newCall.ApiCall();
+		getServletContext().getRequestDispatcher("/index.jsp").forward(request,response);
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String input = request.getParameter("input");
-		request.setAttribute("input", input);
-		getServletContext().getRequestDispatcher("/index.jsp").forward(request,response);
+		
 		
 		//request.getRequestDispatcher("/index.jsp").forward(request, response);
 

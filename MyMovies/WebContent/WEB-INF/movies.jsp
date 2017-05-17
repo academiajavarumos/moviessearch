@@ -4,12 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Films Of The Week</title>
+<title>Insert title here</title>
 </head>
 <body>
-
-The value of the html form is: ${input}
-
 
 </body>
 </html>

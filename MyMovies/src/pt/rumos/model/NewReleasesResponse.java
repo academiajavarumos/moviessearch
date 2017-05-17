@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class NewReleases {
+public class NewReleasesResponse {
 	
 	    
 	    @JsonProperty(value = "results")
@@ -21,5 +21,8 @@ public class NewReleases {
 	        this.films = films;
 	    }
 
+	    
+	    
+	   
 	}
 
