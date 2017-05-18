@@ -18,8 +18,24 @@ public class Movie {
 	@JsonProperty(value = "poster_path")
 	private String poster;
 	
+	@JsonProperty(value = "popularity")
+	private String popularity;
+	
 
-    public String getOverview() {
+	public String getPopularity() {
+		return popularity;
+	}
+
+
+	public void setPopularity(String popularity) {
+		
+		if (popularity.length()>5){
+		String test = popularity.substring(0, 5);
+		this.popularity = test;}
+	}
+
+
+	public String getOverview() {
 		return overview;
 	}
 

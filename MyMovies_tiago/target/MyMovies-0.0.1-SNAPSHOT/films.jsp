@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Films of the Week</title>
+<title>Popular Movies</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -22,6 +22,7 @@
 				<tr>
 					<th>Film Name</th>
 					<th>Release Date</th>
+					<td style="display:none;">
 					<th>Poster</th>
 				</tr>
 			</thead>
@@ -32,6 +33,7 @@
 					<tr>
 						<td>${movie.originalTitle}</td>
 						<td>${movie.releaseDate}</td>
+						<td style="display:none;">
 						<td>${movie.poster}</td>
 		
 			</c:forEach>

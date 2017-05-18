@@ -1,5 +1,8 @@
-pt\rumos\model\Movie.class
+pt\rumos\model\PopularMoviesService.class
 pt\rumos\servlet\App.class
-pt\rumos\model\ApiCallService.class
 pt\rumos\model\NewReleasesResponse.class
-pt\rumos\servlet\MovieServlet.class
+pt\rumos\servlet\WeekMovieServlet.class
+pt\rumos\model\WeekMoviesService.class
+pt\rumos\model\Movie.class
+pt\rumos\servlet\PopularMoviesServlet.class
+pt\rumos\utils\DateUtil.class
