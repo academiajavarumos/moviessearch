@@ -34,7 +34,7 @@
 						<td>${movie.originalTitle}</td>
 						<td>${movie.releaseDate}</td>
 						<td style="display:none;">
-						<td>${movie.poster}</td>
+						<td><img src="https://image.tmdb.org/t/p/w500/${movie.poster}" height="200"></td>
 		
 			</c:forEach>
     </tbody>
