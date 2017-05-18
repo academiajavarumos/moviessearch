@@ -11,6 +11,7 @@ import pt.rumos.model.ApiCallService;
 import pt.rumos.model.NewReleasesResponse;
 
 
+
 @WebServlet("/MovieServlet")
 public class MovieServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

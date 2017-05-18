@@ -32,7 +32,7 @@
 					<tr>
 						<td>${movie.originalTitle}</td>
 						<td>${movie.releaseDate}</td>
-						<td>d>${movie.poster}</td>
+						<td>${movie.poster}</td>
 		
 			</c:forEach>
     </tbody>
