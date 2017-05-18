@@ -24,7 +24,7 @@ public class MovieServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	ApiCallService newCall =  new ApiCallService();
-	NewReleasesResponse moviesListResponse =newCall.ApiCall();
+	NewReleasesResponse moviesListResponse = newCall.ApiCall();
 	
 	request.setAttribute("data", moviesListResponse.getFilms());
 	request.getRequestDispatcher("films.jsp").forward(request, response);

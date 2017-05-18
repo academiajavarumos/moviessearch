@@ -15,6 +15,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 	<div class="container">
 
 		<table class="table table-hover">
@@ -32,7 +33,8 @@
 					<tr>
 						<td>${movie.originalTitle}</td>
 						<td>${movie.releaseDate}</td>
-						<td>d>${movie.poster}</td>
+						<td>${movie.poster}</td>
+						
 		
 			</c:forEach>
     </tbody>

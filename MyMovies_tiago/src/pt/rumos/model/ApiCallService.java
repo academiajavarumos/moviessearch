@@ -17,7 +17,7 @@ public class ApiCallService {
 		CloseableHttpClient client = HttpClientBuilder.create().build();
 
 		CloseableHttpResponse response = client.execute(new HttpGet(
-				"http://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2017-05-12&api_key=e3e6d2f8ff9f741500e0352cf5da5c89"));
+				"http://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2017-05-12&primary_release_date.lte=2017-05-12&api_key=e3e6d2f8ff9f741500e0352cf5da5c89"));
 		String bodyAsString = EntityUtils.toString(response.getEntity());
 		System.out.println("RESPONSE:" + bodyAsString);
 
