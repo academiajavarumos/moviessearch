@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Popular Movies</title>
+<title>Week Releases</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -19,7 +19,7 @@
 
 		<table class="table table-hover">
 			<thead>
-				<tr>
+				<tr style="background: beige;">
 					<th>Film Name</th>
 					<th>Release Date</th>
 					<td style="display:none;">
@@ -31,11 +31,10 @@
 
 				<tbody>
 					<tr>
-						<td>${movie.originalTitle}</td>
-						<td>${movie.releaseDate}</td>
+						<td style = "vertical-align:middle; font-size:24px"><a href="#">${movie.originalTitle}</a></td>
+						<td style = "vertical-align:middle">${movie.releaseDate}</td>
 						<td style="display:none;">
-						<td>${movie.poster}</td>
-		
+						<td><img src="https://image.tmdb.org/t/p/w500/${movie.poster}" height="200"></td>		
 			</c:forEach>
     </tbody>
   </table>
