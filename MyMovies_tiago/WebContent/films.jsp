@@ -5,28 +5,43 @@
 <html>
 <head>
 <title>Week Releases</title>
+<link rel="stylesheet" href="/MyMovies/css/modalstyle.css" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
-	<script type="text/javascript">
 	
-	function getDetails(){
-		
-		$.get( "http://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2017-05-13&primary_release_date.lte=2017-05-20&api_key=e3e6d2f8ff9f741500e0352cf5da5c89", function( data ) {
-			
-			   console.log(data);
-			
-			$('#myModal').modal("show");
-			});
-	}
+<script>
+
+$(function getDetails(){
 	
-	</script>
+
+	$('a').mouseenter(function(){
+
+    	var name = document.getElementById('name');
+    	var title = $(this).text();
+    	name.innerHTML = title;
+    	
+    	$.getJSON("http://api.themoviedb.org/3/search/movie?query="+title+"&api_key=e3e6d2f8ff9f741500e0352cf5da5c89", function( data1){
+    		
+    		var modalOverview = document.getElementById( 'overview' );
+    		modalOverview.innerHTML = data1.results["0"].overview;
+    		    	    
+    	   
+    	});
+    	
+    	$('#myModal').modal("show");
+	
+    });
+   // console.log(data);
+    
+});
+
+	
+</script>
 </head>
 <body>
 	<div class="container">
@@ -45,8 +60,9 @@
 
 				<tbody>
 					<tr>
-						<td style="vertical-align: middle; font-size: 24px"><a
-							href="#" onmouseover=getDetails(this)>${movie.originalTitle}</a></td>
+						<td id="movieTitle"
+							style="vertical-align: middle; font-size: 24px"><a id="myAnchor" href="#"
+							>${movie.originalTitle}</a></td>
 						<td style="vertical-align: middle">${movie.releaseDate}</td>
 						<td style="display: none;">
 						<td><img
@@ -58,6 +74,8 @@
 	</div>
 
 	<!-- Modal -->
+	
+<!-- Modal -->
 	<div id="myModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 
@@ -65,9 +83,9 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">cenas</h4>
+					<h4 class="modal-title" id="name">cenas</h4>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body" id="overview">
 					<p>Mais Cenas</p>
 				</div>
 				<div class="modal-footer">

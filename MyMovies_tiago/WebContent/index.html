@@ -3,46 +3,40 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Films Api</title>
+<link rel="stylesheet" href="/MyMovies/css/htmlbuttonstyle.css" />
+
 </head>
 <body>
+	<br>
+	<form class="form-horizontal" action="WeekMovieServlet" method="get">
 
+		<!-- Button -->
 
-<br>
-<form class="form-horizontal" action="WeekMovieServlet" method="get">
-<fieldset>
+		<div class="container">
 
-<!-- Form Name -->
-<legend>New Week Releases</legend>
+			<div class="wrap">
 
-<!-- Button -->
-<div class="form-group">
+				<button class="clicker">New Releases</button>
+				<div class="circle angled"></div>
+			</div>
 
-  <div class="col-md-4">
-    <button id="search" name="search" class="btn btn-primary">Search</button>
-  </div>
-</div>
+		</div>
+	</form>
+	<br>
+	<br>
+	<form class="form-horizontal" action="PopularMoviesServlet"
+		method="get">
 
-</fieldset>
-</form>
-<br>
-<br>
-<form class="form-horizontal" action="PopularMoviesServlet" method="get">
-<fieldset>
+		<!-- Button -->
 
-<!-- Form Name -->
-<legend>Most Popular Movies</legend>
+		<div class="container">
 
-<!-- Button -->
-<div class="form-group">
-  
-  <div class="col-md-4">
-    <button id="search" name="search" class="btn btn-primary">Search</button>
-  </div>
-</div>
-
-</fieldset>
-</form>
-
+			<div class="wrap">
+				<button class="clicker">Most Popular</button>
+				<div class="circle angled"></div>
+			</div>
+		</div>
+	</form>
 
 </body>
 </html>
