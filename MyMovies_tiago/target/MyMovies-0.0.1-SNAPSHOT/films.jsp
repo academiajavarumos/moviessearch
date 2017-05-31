@@ -13,26 +13,27 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
-	
+
+
 <script>
+
 $(function getDetails(){
 	
 
 	$('a').mouseenter(function(){
 
-    	var name = document.getElementById('name');
+    	var name = document.getElementById('header');
     	var title = $(this).text();
     	name.innerHTML = title;
     	
     	$.getJSON("http://api.themoviedb.org/3/search/movie?query="+title+"&api_key=e3e6d2f8ff9f741500e0352cf5da5c89", function( data1){
     		
-    		var modalOverview = document.getElementById( 'overview' );
+    		var modalOverview = document.getElementById( 'middle' );
     		modalOverview.innerHTML = data1.results["0"].overview;
     		    	    
-    	   
     	});
     	
-    	$('#MyModal').modal("show");
+    	$('#myModal').modal("show");
 	
     });
    // console.log(data);
@@ -73,6 +74,8 @@ $(function getDetails(){
 	</div>
 
 	<!-- Modal -->
+	
+<!-- Modal -->
 	<div id="myModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 
@@ -80,9 +83,9 @@ $(function getDetails(){
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title" id="name">cenas</h4>
+					<h4 class="modal-title" id="header">cenas</h4>
 				</div>
-				<div class="modal-body" id="overview">
+				<div class="modal-body" id="middle">
 					<p>Mais Cenas</p>
 				</div>
 				<div class="modal-footer">

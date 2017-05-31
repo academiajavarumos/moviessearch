@@ -3,40 +3,92 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Films Api</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/MyMovies/css/htmlbuttonstyle.css" />
+<link rel="icon" type="image/png"
+	href="/MyMovies/images/oscarfavicon.png">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
+<script type="text/javascript">
+	function show_sidebar() {
+
+		document.getElementById('sidebar').style.visibility = "visible";
+	}
+
+	function hide_sidebar() {
+		document.getElementById('sidebar').style.visibility = "hidden";
+	}
+	
+
+</script>
 <body>
-	<br>
-	<form class="form-horizontal" action="WeekMovieServlet" method="get">
 
-		<!-- Button -->
+	<div id="workarea">
+  <div class="position">
+	 
+    <!--start button, nothing above this is necessary -->
+    
+   
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a href="WeekMovieServlet" onMouseOver="hide_sidebar()" style="
+    color: #85cbdc;"><span class="spot"></span>New Releases</a>
+        </div>
+      </svg>
+    </div>
 
-		<div class="container">
+    <!--Next button -->
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a class="textbutton" href="PopularMoviesServlet" onMouseOver="hide_sidebar()" style="
+    color: #85cbdc;"><span class="spot"></span>Popular Movies</a>
+        </div>
+      </svg>
+    </div>
+    <!--Next button -->
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a class="textbutton" href="" onMouseOver="show_sidebar()" style="
+    color: #85cbdc;"><span class="spot"></span>Find Movie</a>
+        </div>
+      </svg>
+    </div>
+    <!--End button -->
+	
+		<!-- Text input-->
 
-			<div class="wrap">
+<form action="FindMovieServlet">
+		<div id="sidebar" class="form-group form-inline"
+			style="height: 39px; width: 226px; margin-left: 815px; margin-top: 40px; visibility: hidden;">
 
-				<button class="clicker">New Releases</button>
-				<div class="circle angled"></div>
+			<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+				<div class="input-group-addon"  style="
+    color: #4dbde0;">
+					<i class="fa fa-search"></i>
+				</div>
+				<input  type="text"  name="textinput" class="form-control" id="inlineFormInputGroup"
+					placeholder="Enter a Movie name..." >
 			</div>
 
 		</div>
-	</form>
-	<br>
-	<br>
-	<form class="form-horizontal" action="PopularMoviesServlet"
-		method="get">
+		</form>
 
-		<!-- Button -->
-
-		<div class="container">
-
-			<div class="wrap">
-				<button class="clicker">Most Popular</button>
-				<div class="circle angled"></div>
-			</div>
-		</div>
-	</form>
-
+	</div>
+	</div>
 </body>
 </html>
